@@ -4,7 +4,6 @@ const initialState = {
 }
 
 const reducer = (state = initialState, action) => {
-    console.log(action, '3')
     switch (action.type) {
         case actionTypes.CHANGE_MODE:
             console.log(action.darkModeBool, 'sprawdzmy to')
@@ -13,7 +12,6 @@ const reducer = (state = initialState, action) => {
                 darkMode: action.darkModeBool
             })
         default:
-            // console.log('wszedlem w default')
             return state
     }
 }
