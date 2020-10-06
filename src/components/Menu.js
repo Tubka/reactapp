@@ -1,26 +1,27 @@
 import React, { useState } from 'react';
 import ButtonMode from './ButtonMode'
+import {MenuItems} from './MenuItems'
+
 const Menu = () => {
     const [menu, setMenu] = useState(false)
     
     const handleClickMenu = () => {
         setMenu(!menu)
+        console.log(menu)
     }
 
     return (
-        menu? (
-        <menu>
-            <button onClick={handleClickMenu}>Hidden menu</button>
-            <ul>            
-                <li><a href="#">Moje konto</a></li>
-                <li><a href="#">Ustawienia</a></li>
-                <li><a href="#">Wiadomości</a></li>
-                <li>Dark mode <ButtonMode /></li>
-            </ul>
-        </menu>
-        ) : (
-            <button onClick={handleClickMenu}>Menu</button>
-        )
+        <>
+        <button onClick={handleClickMenu}>{menu? 'Hide': 'Menu'}</button>
+        {menu? (
+            <menu>
+                <ul>            
+        {MenuItems.map(el => <li><a href={el.url} >{el.title}</a></li>)}
+                    <li>Dark mode <ButtonMode /></li>
+                </ul>
+            </menu>
+            ) : null}
+        </>
     )
 }
 

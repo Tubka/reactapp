@@ -11,7 +11,7 @@ export const GlobalStyles = createGlobalStyle`
     // align-items: center;
     background: ${({ theme }) => theme.body};
     // color: white;
-    // color: ${({ theme }) => theme.text};
+    color: ${({ theme }) => theme.text};
     // display: flex;
     flex-direction: column;
     // justify-content: center;
@@ -19,7 +19,7 @@ export const GlobalStyles = createGlobalStyle`
     // margin: 0;
     // padding: 0;
     // font-family: BlinkMacSystemFont, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    transition: all 0.1s linear;
+    transition: 0.2s;
   }
   
   // .button {
@@ -44,12 +44,9 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   ul {
+    padding: 0;
     list-style-type: none;
   }
-
-  // .hiddenButton {
-  //   display: inline;
-  // }
 
   menu {
     width: 200px;
@@ -70,13 +67,16 @@ export const GlobalStyles = createGlobalStyle`
 
   li { 
     width: 100%;
-    margin-bottom: 6px
+    // margin-bottom: 6px
+    padding: 4px 40px;
   }
-
+  
   a {
-    color: white;
-    display: inline-block;
+    color: ${({ theme }) => theme.text};
+    display: block;
     height: 100%;
     width: 100%;
+    text-decoration: none;
+    transition: 0.2s;
   }
   `

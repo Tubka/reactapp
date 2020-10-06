@@ -1,6 +1,7 @@
 import { actionTypes } from './action.types';
 
 const initialState = {
+    darkMode: true,
 }
 
 const reducer = (state = initialState, action) => {
