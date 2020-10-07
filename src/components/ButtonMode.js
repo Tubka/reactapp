@@ -26,6 +26,5 @@ const mapStateToProps = state => ({
     state: state
 })
 
-//{/* <button className='button' onClick={handleChangeMode}>{state.state.reducer.darkMode?`Change on light`:`Change on dark`}</button> */}
 
 export default connect(mapStateToProps)(ButtonMode)
