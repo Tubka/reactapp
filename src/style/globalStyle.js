@@ -1,4 +1,7 @@
-import { createGlobalStyle } from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
+
+const a = 100;
+
 
 export const GlobalStyles = createGlobalStyle`
   *,
@@ -39,8 +42,12 @@ export const GlobalStyles = createGlobalStyle`
     left: 0;
     height: 70px;
     width: 100%;
-    padding: 0 100px;
+    padding: 0 ${a}px;
     background-color: #00aeff;
+  }
+
+  menu__item {
+    padding-left: 100px;
   }
 
   ul {
@@ -53,8 +60,8 @@ export const GlobalStyles = createGlobalStyle`
     padding:0;
     background-color: #00aeff;
     position: absolute;
-    top: 70px;
-    right: 0;
+    top: 60px;
+    right: 100px;
     margin:0;
     // padding-right:50px;
     display: flex;
@@ -68,7 +75,7 @@ export const GlobalStyles = createGlobalStyle`
   li { 
     width: 100%;
     // margin-bottom: 6px
-    padding: 4px 40px;
+    // padding: 4px 40px;
   }
   
   a {
@@ -78,5 +85,23 @@ export const GlobalStyles = createGlobalStyle`
     width: 100%;
     text-decoration: none;
     transition: 0.2s;
+    padding: 5px 40px;
   }
+
   `
+
+  export const Button = styled.button`
+    display: inline-block;
+    border-radius: 3px;
+    padding: 0.5rem 0;
+    margin: 0.5rem 1rem;
+    width: 11rem;
+    background: #123;
+    color: white;
+    border: 2px solid white;
+
+    &:hover {
+      background-color: red;
+      cursor: pointer;
+    }
+    `

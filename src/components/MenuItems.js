@@ -1,4 +1,4 @@
-import React from 'react'
+import ButtonMode from './ButtonMode';
 
 export const MenuItems = [
     {
@@ -18,4 +18,4 @@ export const MenuItems = [
     },
 ]
 
-// export default MenuItems
+

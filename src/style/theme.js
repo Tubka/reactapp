@@ -15,3 +15,7 @@ export const darkTheme = {
     // btnText: '#eee',
     // btnBackground: '#222'
 }
+
+// export const margins = {
+
+// } 

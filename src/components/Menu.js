@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import ButtonMode from './ButtonMode'
 import {MenuItems} from './MenuItems'
-
+import { Button } from '../style/globalStyle'
 const Menu = () => {
     const [menu, setMenu] = useState(false)
     
@@ -12,12 +12,12 @@ const Menu = () => {
 
     return (
         <>
-        <button onClick={handleClickMenu}>{menu? 'Hide': 'Menu'}</button>
+        <Button onClick={handleClickMenu}>{menu? 'Hide menu': 'Menu'}</Button>
         {menu? (
             <menu>
                 <ul>            
-        {MenuItems.map(el => <li><a href={el.url} >{el.title}</a></li>)}
-                    <li>Dark mode <ButtonMode /></li>
+                    {MenuItems.map(item => <li><a href={item.url} >{item.title}</a></li>)}
+                    <li><a>Dark mode<ButtonMode /></a></li>
                 </ul>
             </menu>
             ) : null}
