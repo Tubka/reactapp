@@ -1,6 +1,6 @@
 import styled, { createGlobalStyle } from 'styled-components';
-
-const a = 100;
+import {barVariables} from './variables/barVariables'
+// const paddingMenu = 100; // padding menu px/
 
 
 export const GlobalStyles = createGlobalStyle`
@@ -42,13 +42,13 @@ export const GlobalStyles = createGlobalStyle`
     left: 0;
     height: 70px;
     width: 100%;
-    padding: 0 ${a}px;
-    background-color: #00aeff;
+    padding: 0 ${barVariables.paddingMenu};
+    background-color: ${barVariables.barColor};
   }
 
-  menu__item {
-    padding-left: 100px;
-  }
+  // menu__item {
+  //   padding-left: 100px;
+  // }
 
   ul {
     padding: 0;
@@ -85,7 +85,7 @@ export const GlobalStyles = createGlobalStyle`
     width: 100%;
     text-decoration: none;
     transition: 0.2s;
-    padding: 5px 40px;
+    // padding: 5px 40px;
   }
 
   `
