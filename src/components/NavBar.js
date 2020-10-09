@@ -4,7 +4,6 @@ import * as action from '../redux/action.creators'
 import Logo from './Logo'
 import Menu from './Menu'
 const NavBar = (state) => {
-
     return (
         <>
             <nav className='navBar'>
@@ -18,6 +17,5 @@ const NavBar = (state) => {
 const mapStateToProps = state => ({
     state: state
 })
-
 
 export default connect(mapStateToProps)(NavBar)

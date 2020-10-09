@@ -11,18 +11,9 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    // align-items: center;
     background: ${({ theme }) => theme.body};
-    // color: white;
     color: ${({ theme }) => theme.text};
-    // display: flex;
-    flex-direction: column;
-    // justify-content: center;
-    // height: 100vh;
-    // margin: 0;
-    // padding: 0;
-    // font-family: BlinkMacSystemFont, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    transition: 0.2s;
+    transition: background 0.2s;
   }
   
   // .button {
@@ -61,7 +52,7 @@ export const GlobalStyles = createGlobalStyle`
     background-color: #00aeff;
     position: absolute;
     top: 60px;
-    right: 100px;
+    right: 30px;
     margin:0;
     // padding-right:50px;
     display: flex;

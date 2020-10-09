@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom'
 import ButtonMode from './ButtonMode'
 import {MenuItems} from './MenuItems'
 import { Button } from '../style/globalStyle'
@@ -7,7 +8,10 @@ const Menu = () => {
     
     const handleClickMenu = () => {
         setMenu(!menu)
-        console.log(menu)
+    }
+
+    const closeMenu = () => {
+        setMenu(false)
     }
 
     return (
@@ -16,8 +20,8 @@ const Menu = () => {
         {menu? (
             <menu>
                 <ul>            
-                    {MenuItems.map(item => <li><a href={item.url} >{item.title}</a></li>)}
-                    <li><a>Dark mode<ButtonMode /></a></li>
+                    {MenuItems.map(item => <li><Link to={item.url} onClick={closeMenu}>{item.title}</Link></li>)}
+                    <li>Dark mode<ButtonMode /></li>
                 </ul>
             </menu>
             ) : null}

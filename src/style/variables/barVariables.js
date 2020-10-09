@@ -1,4 +1,4 @@
 export const barVariables = {
-    paddingMenu: `100px`,
+    paddingMenu: `30px`,
     barColor: `#00aeff`,
 }

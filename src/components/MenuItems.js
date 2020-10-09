@@ -1,5 +1,3 @@
-import ButtonMode from './ButtonMode';
-
 export const MenuItems = [
     {
         title: 'Moje Konto',

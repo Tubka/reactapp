@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
 import NavBar from './components/NavBar';
 import { ThemeProvider } from 'styled-components';
@@ -20,8 +21,13 @@ function App(state) {
   return (
     <>
       <ThemeProvider theme={state.state.reducer.darkMode? darkTheme: lightTheme}>
-        <GlobalStyles />
-        <NavBar/>
+        <Router>
+          <GlobalStyles />
+          <NavBar/>
+          <Switch>
+            <Route path='/' />
+          </Switch>
+        </Router>
       </ThemeProvider>
     </>
   );
