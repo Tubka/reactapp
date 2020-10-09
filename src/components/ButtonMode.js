@@ -11,9 +11,6 @@ const ButtonMode = (state) => {
         dispatch(action.reduxChangeMode(!state.state.reducer.darkMode));
         localStorage.setItem('darkMode', !state.state.reducer.darkMode)
     }
-
-    console.log('montowanie button, ', state.state.reducer.darkMode)
-    console.log('local, ', localStorage.getItem('darkMode'))
     return (
         <label className="switch">
             <input type="checkbox" onChange={handleChangeMode} checked={state.state.reducer.darkMode ? true : false} />

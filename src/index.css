@@ -1,7 +1,7 @@
-:root {
+/* :root {
   --mainColor: #929292;
   --mainContrastColor: #222222;
-}
+} */
 
 body {
   margin: 0;
@@ -24,6 +24,8 @@ code {
   display: inline-block;
   width: 30px;
   height: 17px;
+  margin-left: 10px; 
+
 }
 
 /* Hide default HTML checkbox */
@@ -65,7 +67,8 @@ input:checked + .slider {
 
 input:focus + .slider {
   /* box-shadow: 0 0 1px #2196F3; */
-  box-shadow: 0 0 1px #1b2833;
+  box-shadow: 0 0 5px #000;
+  /* border: 1px solid red; */
 }
 
 input:checked + .slider:before {
@@ -73,6 +76,7 @@ input:checked + .slider:before {
   -ms-transform: translateX(13px);
   transform: translateX(13px);
 }
+
 
 /* Rounded sliders */
 .slider.round {

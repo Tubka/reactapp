@@ -1,7 +1,5 @@
 import styled, { createGlobalStyle } from 'styled-components';
-import {barVariables} from './variables/barVariables'
-// const paddingMenu = 100; // padding menu px/
-
+import { barVariables } from './variables/barVariables'
 
 export const GlobalStyles = createGlobalStyle`
   *,
@@ -16,12 +14,6 @@ export const GlobalStyles = createGlobalStyle`
     transition: background 0.2s;
   }
   
-  // .button {
-  //     display: block;
-  //     color: ${({ theme }) => theme.btnText};
-  //     background-color: ${({ theme }) => theme.btnBackground};
-  // }
-
   //STYLE NAVBAR
 
   .navBar {
@@ -37,10 +29,6 @@ export const GlobalStyles = createGlobalStyle`
     background-color: ${barVariables.barColor};
   }
 
-  // menu__item {
-  //   padding-left: 100px;
-  // }
-
   ul {
     padding: 0;
     list-style-type: none;
@@ -52,7 +40,7 @@ export const GlobalStyles = createGlobalStyle`
     background-color: #00aeff;
     position: absolute;
     top: 60px;
-    right: 30px;
+    right: 0px;
     margin:0;
     // padding-right:50px;
     display: flex;
@@ -61,12 +49,16 @@ export const GlobalStyles = createGlobalStyle`
 
   ul { 
     width: 100%
+    background-color: red;
   }
 
   li { 
     width: 100%;
-    // margin-bottom: 6px
-    // padding: 4px 40px;
+    text-align: center;
+    
+    &:hover { 
+      // background-color: #2dbdff;
+    }
   }
   
   a {
@@ -75,10 +67,16 @@ export const GlobalStyles = createGlobalStyle`
     height: 100%;
     width: 100%;
     text-decoration: none;
-    transition: 0.2s;
-    // padding: 5px 40px;
+    transition: 0.3s;
+    padding: 5px 40px;
+    &:hover { 
+      background-color: #2dbdff;
+    }
   }
 
+  .menu__darkmode {
+    padding-top: 10px;
+  }
   `
 
   export const Button = styled.button`
@@ -87,12 +85,12 @@ export const GlobalStyles = createGlobalStyle`
     padding: 0.5rem 0;
     margin: 0.5rem 1rem;
     width: 11rem;
-    background: #123;
+    background: #1c5c9c;
     color: white;
-    border: 2px solid white;
-
+    border: 1px solid white;
+    
     &:hover {
-      background-color: red;
+      background-color: #2dbdff;
       cursor: pointer;
     }
     `
