@@ -1,21 +1,18 @@
-import React, { useEffect,  } from 'react'
-import { useDispatch, connect } from 'react-redux'
-import * as action from '../redux/action.creators'
+import React from 'react'
+// import * as action from '../redux/action.creators'
 import Logo from './Logo'
 import Menu from './Menu'
+import Button from './buttons/Button'
+import '../style/navBar.scss'
 const NavBar = (state) => {
     return (
         <>
             <nav className='navBar'>
                 <Logo />
+                 {/* <Button text='Kliknij' style='secondary'/> */}
                 <Menu/>
             </nav>
         </>
     )
 }
-
-const mapStateToProps = state => ({
-    state: state
-})
-
-export default connect(mapStateToProps)(NavBar)
+export default NavBar;

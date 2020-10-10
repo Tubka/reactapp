@@ -1,0 +1,13 @@
+@import 'variables.scss';
+
+.navBar {
+display: flex;
+align-items: center;
+justify-content: space-between;
+top: 0;
+left: 0;
+height: 70px;
+width: 100%;
+// padding: 0 ${barVariables.paddingMenu};
+background-color: var(--primaryColor);
+}

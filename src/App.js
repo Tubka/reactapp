@@ -1,14 +1,14 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import './App.css';
 import NavBar from './components/NavBar';
 import { ThemeProvider } from 'styled-components';
-import { lightTheme, darkTheme } from './style/theme';
-import { GlobalStyles } from './style/globalStyle';
-import { useDispatch, connect } from 'react-redux';
+import { lightTheme, darkTheme } from './theme';
+import { useDispatch, useSelector} from 'react-redux';
 import * as action from './redux/action.creators';
+import './style/main.scss'
 
 function App(state) {
+  const darkMode = useSelector(state => state.reducer.darkMode)
   const dispatch = useDispatch()
   useEffect(() => {
     if(localStorage.getItem('darkMode')==='true') {
@@ -20,9 +20,8 @@ function App(state) {
 
   return (
     <>
-      <ThemeProvider theme={state.state.reducer.darkMode? darkTheme: lightTheme}>
+      <ThemeProvider theme={darkMode? darkTheme: lightTheme}>
         <Router>
-          <GlobalStyles />
           <NavBar/>
           <Switch>
             <Route path='/' />
@@ -33,8 +32,4 @@ function App(state) {
   );
 } 
 
-const mapStateToProps = state => ({
-  state: state
-})
-
-export default connect(mapStateToProps)(App);
+export default App;
