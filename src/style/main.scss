@@ -1,74 +1,37 @@
 @import 'variables.scss';
+@import 'switchButton.scss';
+@import 'menu.scss';
+@import 'navBar.scss';
+@import 'search.scss';
+@import 'header.scss';
+@import 'aside.scss';
 
 *,
-  *::after,
-  *::before {
-    box-sizing: border-box;
-  }
+*::after,
+*::before {
+  box-sizing: border-box;
+}
 
 html {
-    background-color: var(--greyLight);
+  --primaryColor: #fff;
+  color: #000;
+  font-family: 'Karla', sans-serif;
+  background-color: var(--greyDark);
 
-    &.darkTheme {
-        background-color: var(--greyDark);
-    }
+  &.darkTheme {
+    color: white;
+    background-color: var(--greyLight);
+  }
 }
 
 body {
-    transition: background 0.2s;
-    margin: 0;
-    padding: 0;
-}
-  
-//STYLE NAVBAR
-
-
-
-menu {
-    width: 200px;
-    padding:0;
-    background-color: #00aeff;
-    position: absolute;
-    top: 60px;
-    right: 0px;
-    margin:0;
-    // padding-right:50px;
-    display: flex;
-    flex-direction: column;
-    transition: 0.2s;
-
-    &__darkmode {
-        padding-top: 10px;
-        transition: all 0.3s;
-        }
-}
-    
-ul { 
-    width: 100%;
-    padding: 0;
-    list-style-type: none;
+  transition: background 0.2s;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
-li { 
-    width: 100%;
-    text-align: center;
-
-// &:hover { 
-    // background-color: #2dbdff;
-// }
-}
-
-a {
-    // color: ${({ theme }) => theme.text};
-    display: block;
-    height: 100%;
-    width: 100%;
-    text-decoration: none;
-    transition: 0.3s;
-    padding: 5px 40px;
-
-    &:hover { 
-        background-color: #2dbdff;
-    }
+ul {
+  list-style-type: none;
 }
 

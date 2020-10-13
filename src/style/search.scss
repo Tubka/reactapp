@@ -1,0 +1,28 @@
+.search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__input {
+        color: var(--greyLight);
+        height: 2rem;
+        border: 1px solid var(--greyLight);
+        background-color: var(--secondaryColor);
+        border-radius: 4px;
+        font-weight: bold;
+        font-size: 1.2rem;
+        padding-left: 10px;
+
+        &:focus {
+            outline-color: var(--greyDark);
+        }
+    }
+
+    &__icon {
+        width: 24px;
+        height: 24px;
+        margin-left: 10px;
+        color: var(--greyLight);
+        cursor: pointer;
+    }
+}

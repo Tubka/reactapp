@@ -1,0 +1,43 @@
+.asideLeft {
+    // position: absolute;
+    // left: 0;
+    // top: 60px;
+    // width: 50%;
+    background-color: var(--primaryColor);
+    border-top: 1px solid var(--greyLight);
+    border-right: 1px solid var(--greyLight);
+    
+    &__list {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    &__item {
+        width: 200px;
+        text-align: center;
+    }
+}
+
+.asideRight {
+    // position: absolute;
+    // right: 0;
+    // top: 60px;
+    // width: 50%;
+    background-color: var(--primaryColor);
+    border-top: 1px solid var(--greyLight);
+    border-left: 1px solid var(--greyLight);
+    
+    &__list {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    &__item {
+        width: 200px;
+        text-align: center;
+    }
+}

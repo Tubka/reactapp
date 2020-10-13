@@ -1,16 +1,16 @@
-import React from 'react'
+import React from 'react';
 // import * as action from '../redux/action.creators'
-import Logo from './Logo'
-import Menu from './Menu'
-import Button from './buttons/Button'
-import '../style/navBar.scss'
-const NavBar = (state) => {
+import Logo from './Logo';
+import Menu from './Menu';
+import '../style/navBar.scss';
+import { Search } from './Search' ;
+const NavBar = () => {
     return (
         <>
             <nav className='navBar'>
                 <Logo />
-                 {/* <Button text='Kliknij' style='secondary'/> */}
-                <Menu/>
+                <Search />
+                <Menu />
             </nav>
         </>
     )

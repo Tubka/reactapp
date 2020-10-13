@@ -31,12 +31,12 @@ export function setColorModeClass(colorMode) {
 }
 
 const ButtonMode = () => {
-    const dispatch = useDispatch()
-    const darkMode = useSelector(state => state.reducer.darkMode)
+    const dispatch = useDispatch();
+    const darkMode = useSelector(state => state.reducer.darkMode);
     
     useEffect(()=>{
-        console.log('wykon')
-        const darkModeLocalStorage = localStorage.getItem('darkMode')==='true'? true: false 
+        console.log('wykon');
+        const darkModeLocalStorage = localStorage.getItem('darkMode')==='true'? true: false;
         setColorModeClass(darkModeLocalStorage);
     }, []) 
     
